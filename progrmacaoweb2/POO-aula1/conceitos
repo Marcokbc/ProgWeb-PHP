@@ -1,0 +1,17 @@
+O outro paradgma que progravamos era o estruturado e procedural
+php é multiparadgma -> pode ser programado de diversas formas
+Objetos Reais -> Concretos ou Abstratos -> Elementos de Software
+Classe -> Planejamento de como os objetos vão ser representados
+
+ -> Carro -> Classe Carro 
+    Atributos (Caracteristicas)
+     ->Marca
+    Métodos (Ações)
+     ->Andar
+
+-> Objeto é a instancia da Classe -> Transforma o que planejamos em algo real
+
+    Estado
+        marca-> volks
+        modelo -> Fusca
+        quilometragem -> 150
