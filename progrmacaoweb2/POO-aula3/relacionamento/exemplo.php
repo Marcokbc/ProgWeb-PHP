@@ -4,8 +4,9 @@
 Relacionamentos entre classes e objetos
 
 - Associação -> Relacionamento mais comum -> Neste Relacionamento um atributo de uma classe é apontado para um objeto de outra classe.
+- Composição -> Um relacionamento em que um objeto de uma classe é instciado dentro de outra classe.
 - Apregação
-- Composição
+
 
 EMPRESA 
     -Nome
