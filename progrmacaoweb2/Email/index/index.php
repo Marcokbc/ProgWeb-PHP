@@ -19,7 +19,18 @@ try{
     $mail->password = 'marcoantonio';
     $mail->Port = 587;
 
-    
+    $mail->setFrom = ('MAMeira55@gmail.com');
+    $mail->addAddress('MAMeira55@gmail.com');
+
+    $mail->isHTML(true);
+    $mail->Subject = 'Teste de E-mail';
+    $mail->Body = 'Chegou o email teste';
+
+    if($mail->send()){
+        echo 'Email enviado com sucesso';
+    }else{
+        echo 'Email não enviado';
+    }
 }catch(Exception $e){
     echo "Erro ao enviar mensagem {$mail->ErrorInfo}";
 }
