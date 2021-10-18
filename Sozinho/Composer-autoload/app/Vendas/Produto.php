@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Vendas;
+
 class Produto{
     private $id, $descricao;
 

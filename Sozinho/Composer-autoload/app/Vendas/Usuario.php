@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Vendas;
+
 class Usuario{
     private $nome, $idade;
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Vendas;
+
 class Compra{
     public $id, $compra, $usuario;
 

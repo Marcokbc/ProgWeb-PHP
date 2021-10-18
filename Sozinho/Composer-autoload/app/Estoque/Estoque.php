@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Estoque;
+
 class Estoque{
     private $total;
 

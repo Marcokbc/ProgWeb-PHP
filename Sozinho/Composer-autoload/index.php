@@ -1,5 +1,10 @@
 <?php
 
+use App\Vendas\Usuario;
+use App\Vendas\Produto;
+use App\Vendas\Compra;
+use App\Estoque\Estoque;
+
 require_once 'vendor/autoload.php';
 
 $u = new Usuario();
