@@ -1,0 +1,4 @@
+M -> MODEL -> Responsavel por gerenciar as regras de negocio, manipular dados, gerenciar as conecções com banco de dados.
+V -> VIEW -> Parte exeterna do projeto, o que o usuario vai ver.
+C -> CONTROLLER -> Responsavel por fazer uma ponte entre os dados obtidos no model e a exibição desses dados na view.
+

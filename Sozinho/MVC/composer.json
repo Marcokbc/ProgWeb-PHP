@@ -1,0 +1,8 @@
+{
+    "name:":"Sozinho/MVC",
+    "autoload":{
+        "psr-4":{
+            "App\\":"app/"
+        }
+    }
+}
