@@ -11,11 +11,12 @@ class Home extends Page{
     */
 
     public static function getHome(){
+        $MaOrganization = new Organization();
         //Vew da home
         $content = View::render('pages/home',[
-            'name' => 'MARCO',
-            'description' => 'ESTUDO',
-            'site' => 'Exemplo de site'
+            'name' => $MaOrganization->name,
+            'description' => $MaOrganization->description,
+            'site' => $MaOrganization->site
         ]);
         //Retorna a view da pagina
         return parent::getPage('MARCO',$content);
