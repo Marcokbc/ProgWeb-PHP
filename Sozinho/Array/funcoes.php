@@ -55,3 +55,42 @@ echo "<hr>";
 echo "<pre>";
 var_dump(array_key_exists(0,$array));
 echo "</pre>";
+
+echo "<hr>";
+
+echo "<pre>";
+echo array_key_first($array);
+echo "</pre>";
+
+
+echo "<pre>";
+echo reset(array_keys($array));
+echo "</pre>";
+
+echo "<hr>";
+
+echo "<pre>";
+echo end(array_keys($array));
+echo "</pre>";
+
+echo "<pre>";
+echo array_key_last($array);
+echo "</pre>";
+
+echo "<hr>";
+
+echo "<pre>";
+print_r(array_flip($array));
+echo "</pre>";
+
+echo "<hr>";
+
+echo "<pre>";
+echo implode(', ',$array);//separador, array/ lista dos dados de um array
+echo "</pre>";
+
+echo "<hr>";
+
+echo "<pre>";
+echo explode(', ','banana,laranja,abacaxi');//separador, string/ transforma a string e um array
+echo "</pre>";
