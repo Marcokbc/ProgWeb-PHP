@@ -25,12 +25,12 @@ class View{
 
             //CHAVES DO ARRAY VARS
             $keys = array_keys($vars);
-            $keys = array_map(function($item){
+            $keys = array_map(function($item){//O array_map é como se fosse um filtro, cada key vai para item e assim add {{}}
                 return '{{'.$item.'}}';
             },$keys);
 
             //RETORNA O CONTEUDO RENDERIZADO 
-            return str_replace($keys,array_values($vars),$contentView);
+            return str_replace($keys,array_values($vars),$contentView);//Aqui ele substitui as keys, pelo conteudo em vares no contentView
         }
      
 }
