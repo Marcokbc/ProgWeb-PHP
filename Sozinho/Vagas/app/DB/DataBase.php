@@ -58,9 +58,18 @@ class DataBase{
     private function setConnection(){
         try{
             $this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::NAME,self::USER,self::PASS);
-            $this->connection->setAttribute(PDO::)
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);//o atributo errmode vai receber o errmode_exception. Vai sempre lançar uma exception se algo não saia como o esperado
         }catch(PDOException $e){
             die('ERROR:'.$e->getMessage());
         }
     }
-}
+
+    /**
+     * Metodo responsavel por inserir dados no banco
+     * @param array $values [field/value]
+     * @return interger
+     */
+    public function insert($values){
+        $query = 'INSERT INTO vagas (titulo,descricao,ativo,data) VALUES ("")';
+    }
+}    
