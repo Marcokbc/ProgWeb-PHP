@@ -124,4 +124,39 @@ class DataBase{
         //EXECUTA A QUERY
         return $this->execute($query);
     }
+
+    /**
+     * @param string $where
+     * @param array $values [field => value]
+     * @return boolean
+     */
+    public function update($where,$values){
+        //DADOS DA QUERY
+        $fields = array_keys($values);
+
+        //MONTA A QUERY
+        $query = 'UPDATE '.$this->table.' SET '.implode('=?,',$fields).'=? WHERE '.$where;
+
+        //EXECUTA A QUERY
+        $this->execute($query,array_values($values));
+
+        return true;
+    }
+
+    /**
+     * Metodo resposavel por excluir a vaga do banco de dados
+     * @param string $where
+     * @return boolean
+     */
+
+    public function delete($where){
+        //Monta a query
+        $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+        
+        //EXECUTA A QUERY
+        $this->execute($query);
+
+        //retorna sucesso
+        return true;
+    }
 }    

@@ -57,6 +57,27 @@ class Vaga{
      }
 
      /**
+      * Metodo responsavel por atuazalizar a vaga no banco
+      * @return boolean 
+      */
+     public function atualizar(){
+        return (new Database('vagas'))->update('id = '.$this->id,[
+                                                                    'titulo' => $this->titulo,
+                                                                    'descricao' => $this->descricao,
+                                                                    'ativo' => $this->ativo,
+                                                                    'data' =>  $this->data
+        ]);
+     }
+
+     /**
+      * Metodo responsavel por excluir a vaga do banco
+      * @return boolean
+      */
+     public function excluir(){
+         return (new DataBase('vagas'))->delete('id = '.$this->id);
+     }
+
+     /**
       * Metodo responsavel por obter as vagas do banco de dados
       *
       * @param string $where
@@ -67,5 +88,15 @@ class Vaga{
      public static function getVagas($where = null, $order = null, $limit = null){
         return (new Database('vagas'))->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
         //fetchAll transforma todo retorno em um array, o primeiro aytributo define que o tipo de fetch que vai ser retornado no caso classe, e o tipo de objeto é definido pelo segundo
+     }
+
+     /**
+      * Metodo responsavel por buscar uma vaga com base em seu ID
+      * @param interger $id
+      * @return Vaga
+      */
+     public static function getVaga($id){
+        return (new DataBase('vagas'))->select('id = '.$id)->fetchObject(self::class);
+        //o fetchObject, diferente do All, pega somente um e o transforma em objeto e instanciando na classe dos parametros
      }
 }
