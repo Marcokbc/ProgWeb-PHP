@@ -33,7 +33,7 @@
     }
 
     $resultados = strlen($resultados) ? $resultados : '<tr>
-                                                            <td> colspan="6" class="text-center">
+                                                            <td colspan="6" class="text-center">
                                                                 Nenhuma Vaga encontrada
                                                             </td>
                                                         </tr>';

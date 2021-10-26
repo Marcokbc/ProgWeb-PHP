@@ -2,7 +2,7 @@
 
     <h2 class="mt-3">Excluir Vaga</h2>
 
-    <form action="formulario.php" method="post">
+    <form method="post">
         <div class="form-group">
             <p>Você deseja realmente excluir a vaga <strong><?=$obVaga->titulo?></strong></p>
         </div>

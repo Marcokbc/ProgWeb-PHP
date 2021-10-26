@@ -87,21 +87,19 @@ class DataBase{
      * @return interger ID ISERIDO
      */
     public function insert($values){
+            //DADOS DA QUERY
+            $fields = array_keys($values);
+            $binds  = array_pad([],count($fields),'?');
 
-        //DADOS DA QUERY
-        $fields = array_keys($values);
-        $binds = array_pad([],count($fields),'?');//Começa com o array vazio e se ele não ter o tamanhio de fields add ?
+            //MONTA A QUERY
+            $query = 'INSERT INTO '.$this->table.' ('.implode(',',$fields).') VALUES ('.implode(',',$binds).')';
 
-        //MONTA A QUERY
-        $query = 'INSERT INTO '.$this->table.' ('.implode(',',$fields).') VALUES ('.implode(',',$binds).')';
+            //EXECUTA O INSERT
+            $this->execute($query,array_values($values));
 
-        //EXECUTA O INSERT
-        $this->execute($query,array_values($values));
-
-        //RETORNA O ULTIMO ID INSERIDO
-        return $this->connection->lastInsertId();
-
-    }
+            //RETORNA O ID INSERIDO
+            return $this->connection->lastInsertId();
+  }
 
     /**
      * Metodo que faz uma consulta no banco
