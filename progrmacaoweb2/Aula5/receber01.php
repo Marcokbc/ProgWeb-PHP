@@ -13,3 +13,4 @@ while($idade <= 18){
 }
 
 echo "Faltam $quantofalta anos para essa pessoa completar 18 anos";
+
