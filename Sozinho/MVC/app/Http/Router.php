@@ -37,7 +37,7 @@ class Router{
         $this->url = $url;
         $this->setPrefix();
     }
-
+    
     /**
      * Método responsável por definir o prefixo das rotas
      */
